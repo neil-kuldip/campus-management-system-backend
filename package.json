@@ -1,0 +1,30 @@
+{
+  "name": "campus-management-system-backend",
+  "version": "1.0.0",
+  "description": "backend for campus mangement system",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/neil-kuldip/campus-management-system-backend.git"
+  },
+  "author": "Ambonique Thomas",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/neil-kuldip/campus-management-system-backend/issues"
+  },
+  "homepage": "https://github.com/neil-kuldip/campus-management-system-backend#readme",
+  "dependencies": {
+    "express": "^4.18.1",
+    "express-async-handler": "^1.1.4",
+    "pg": "^8.7.3",
+    "pgtools": "^0.3.0",
+    "sequelize": "^6.3.5"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.6"
+  }
+}
