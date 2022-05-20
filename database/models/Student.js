@@ -20,7 +20,6 @@ const Student = db.define("student", {
   email: {
     type: Sequelize.STRING,
     allowNull: false
-<<<<<<< Updated upstream
   },
 
   imageUrl: {
@@ -30,8 +29,6 @@ const Student = db.define("student", {
 
   gpa: {
     type: Sequelize.DOUBLE(3,2)
-=======
->>>>>>> Stashed changes
   }
 
 });
