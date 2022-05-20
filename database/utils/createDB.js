@@ -1,9 +1,3 @@
-/*==================================================
-/database/utils/creatDB.js
-
-It creates the actual Postgres database. 
-After the Postgres database is created, Sequelize can connect to it.
-==================================================*/
 const pgtools = require('pgtools');  // Import tool to create Postgres database.
 const {dbName, dbUser, dbPwd} = require('./configDB');  // Import the database name, username, and password.
 
@@ -16,8 +10,6 @@ const config = {
 };
     
   // Define function to create Postgres database.
-  // If the database of that name already exists, this does nothing.
-  // If the database doesn't exist, this will create the Postgres database of that name. 
   const createDB = async () => {
     try {
       await pgtools.createdb(config, dbName);

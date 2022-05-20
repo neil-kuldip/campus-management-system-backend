@@ -1,8 +1,3 @@
-/*==================================================
-/database/utils/seedDB.js
-
-It seeds the database with several initial students and campuses.
-==================================================*/
 const { Campus, Student } = require('../models');  // Import database models
 
 // Seed database
