@@ -15,7 +15,22 @@ const Student = db.define("student", {
   lastname: {
     type: Sequelize.STRING,
     allowNull: false
+  },
+
+  email: {
+    type: Sequelize.STRING,
+    allowNull: false
+  },
+
+  imageUrl: {
+    type: Sequelize.STRING,
+    defaultValue: ""
+  },
+
+  gpa: {
+    type: Sequelize.DOUBLE(3,2)
   }
+
 });
 
 // Export the student model
