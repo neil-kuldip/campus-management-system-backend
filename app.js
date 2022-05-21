@@ -54,10 +54,20 @@ const configureApp = async () => {
       [
         "Welcome to the Campus Management System", 
         { "Usage" : {
-            "All Campuses": {"path": "/campuses", "operations": "get, post"},
-            "All Students": {"path": "/students", "operations": "get, post"},
-            "Single Campus": {"path": "/campuses/:id", "operations": "get, put, delete", "notice": "post operation of parent will create Campus instance"},
-            "Single Student": {"path": "/students/:id", "operations": "get, put, delete", "notice": "post operation of parent will create Student instance"}
+            "All Campuses": {"path": "/api/campuses", "operations": "get, post"},
+            "All Students": {"path": "/api/students", "operations": "get, post"},
+            "Single Campus": {
+              "path": "/api/campuses/:id", 
+              "operations": "get, put, delete",
+              "fields": "id (integer), name (string), imageUrl (string), address (string), description (string)",
+              "notice": "post operation of parent will create Campus instance"
+            },
+            "Single Student": {
+              "path": "/api/students/:id", 
+              "operations": "get, put, delete", 
+              "fields": "id (integer), firstname (string), lastname (string), email (string), imageUrl (string), gpa (double), campusId (integer)", 
+              "notice": "post operation of parent will create Student instance"
+            }
           }
         }
       ]
