@@ -49,7 +49,20 @@ const configureApp = async () => {
 
   // Set up the Express application's main top-level route and attach all sub-routes to it
   app.use("/api", apiRouter);  // Add main top-level URL path "/api" before sub-routes
-
+  app.get("/", (req, res) => {
+    res.status(200).json(
+      [
+        "Welcome to the Campus Management System", 
+        { "Usage" : {
+            "All Campuses": {"path": "/campuses", "operations": "get, post"},
+            "All Students": {"path": "/students", "operations": "get, post"},
+            "Single Campus": {"path": "/campuses/:id", "operations": "get, put, delete", "notice": "post operation of parent will create Campus instance"},
+            "Single Student": {"path": "/students/:id", "operations": "get, put, delete", "notice": "post operation of parent will create Student instance"}
+          }
+        }
+      ]
+    )
+  });
   // Handle routing error: Page Not Found
   // It is triggered when a request is made to an undefined route 
   app.use((req, res, next) => {
