@@ -7,27 +7,28 @@ const seedDB = async () => {
 		name: "Hunter College",
 		address: "695 Park Ave, New York, NY 10065",
 		description: "This is a school in New York, New York.",
-		imageUrl: "https://www.dropbox.com/s/xr3ou5tm20k3vsf/building_avatar.png?dl=0"
+		imageUrl: "https://i.imgur.com/b7xP3Pi.jpg"
 	});
 	// Create a new campus
 	const dummy_campus2 = await Campus.create({
 		name: "Queens College",
 		address: "65-30 Kissena Blvd, Queens, NY 11367",
 		description: "This is a school in Queens, New York.",
-		imageUrl: "https://www.dropbox.com/s/xr3ou5tm20k3vsf/building_avatar.png?dl=0"
+		imageUrl: "https://i.imgur.com/b7xP3Pi.jpg"
 	});
 	// Create a new campus
 	const dummy_campus3 = await Campus.create({
 		name: "Brooklyn College",
 		address: "2900 Bedford Ave, Brooklyn, NY 11210",
 		description: "This is a school in Brooklyn, New York.",
-		imageUrl: "https://www.dropbox.com/s/xr3ou5tm20k3vsf/building_avatar.png?dl=0"
+		imageUrl: "https://i.imgur.com/b7xP3Pi.jpg"
 	});
 	
 	// Create a new student for a campus
 	const dummy_student = await Student.create({
 	  	firstname: "Joe",
       	lastname: "Smith",
+		imageUrl: "https://i.imgur.com/RtuMEcc.png",
 		email: "jsmith12@myhunter.cuny.edu",
 		gpa: 3.87
 	});
@@ -35,6 +36,7 @@ const seedDB = async () => {
 	const dummy_student2 = await Student.create({
 		firstname: "Mary",
       	lastname: "Johnson",
+		imageUrl: "https://i.imgur.com/RtuMEcc.png",
 		email: "mjohnson34@qc.cuny.edu",
 		gpa: 2.54
 	});
@@ -42,6 +44,7 @@ const seedDB = async () => {
 	const dummy_student3 = await Student.create({
 		firstname: "Donald",
       	lastname: "Glover",
+		imageUrl: "https://i.imgur.com/RtuMEcc.png",
 		email: "dglover76@bcmail.cuny.edu",
 		gpa: 3.45
 	});
